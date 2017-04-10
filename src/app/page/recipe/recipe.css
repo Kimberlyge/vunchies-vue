@@ -1,0 +1,39 @@
+.page {
+
+}
+
+.grid {
+  composes: flex-grid from $grid;
+}
+
+.cover {
+  display: flex;
+  position: relative;
+  /*flex-direction: row;*/
+
+  composes: gut-xsmall from $grid;
+  composes: col-1-1 from $grid;
+  composes: col-s-1-2 from $grid;
+}
+
+.cover-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateZ(-50%);
+
+  font-size: 4rem;
+}
+
+.cover-img {
+  composes: cover;
+  object-fit: cover;
+}
+
+.ingredients {
+  composes: gut-xsmall from $grid;
+  composes: col-1-1 from $grid;
+  composes: col-s-1-3 from $grid;
+}

@@ -1,0 +1,4 @@
+.page {
+  composes: fullscreen from $page;
+  background-color: coral;
+}

@@ -1,0 +1,4 @@
+.component {
+  composes: fullscreen from $page;
+  background-color: pink;
+}

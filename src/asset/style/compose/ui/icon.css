@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Icon
+   ========================================================================== */
+
+/**
+ * This file contains all icons used across pages/components.
+ */
+
+/**
+ * Default icon styles
+ *
+ * Reset icon
+ */
+.icon {
+  composes: reset-bmp from $common;
+
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-gluten-free {
+  composes: icon;
+  background-image: url("/src/asset/image/icons/gluten-free.svg");
+}
+
+.icon-sugar-free {
+  composes: icon;
+  background-image: url("/src/asset/image/icons/sugar-free.svg");
+}
+
+.icon-soy-free {
+  composes: icon;
+  background-image: url("/src/asset/image/icons/soy-free.svg");
+}
+
+.icon-nut-free {
+  composes: icon;
+  background-image: url("/src/asset/image/icons/nut-free.svg");
+}
+
+.icon-raw {
+  composes: icon;
+  background-image: url("/src/asset/image/icons/raw-outline.svg");
+}
