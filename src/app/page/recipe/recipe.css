@@ -37,3 +37,7 @@
   composes: col-1-1 from $grid;
   composes: col-s-1-3 from $grid;
 }
+
+.ingredients-list {
+  composes: ingredients;
+}

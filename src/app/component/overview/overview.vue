@@ -9,7 +9,14 @@
       <div :class="$style.itemWrap">
         <h2 :class="$style.title">{{post.title.rendered}}</h2>
         <ul :class="$style.categories">
-          <li v-for="id in post.categories">
+          <p>{{post.categegories}}</p>
+          <!-- <template v-for="id in post.categories">
+            <template v-for="category in categories">
+              <li v-if="id == category.id">{{ category.name }}</li>
+            </template>
+          </template> -->
+
+          <!-- <li >
             <div v-if="id == 1">Breakfast</div>
             <div v-if="id == 14">Dinner</div>
             <div v-if="id == 17">Dessert</div>
@@ -20,7 +27,7 @@
             <div v-if="id == 34">Sidedish</div>
             <div v-if="id == 33">Snacks</div>
             <div v-if="id == 15">Smoothie</div>
-          </li>
+          </li> -->
         </ul>
         <ul :class="$style.tags">
           <li v-for="id in post.tags">
