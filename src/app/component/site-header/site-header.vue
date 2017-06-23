@@ -4,7 +4,6 @@
 
 <template>
   <header :class="$style.component">
-
     <router-link to="/">
       <h1>Vunchies</h1>
       <h3>A vegan food blog</h3>

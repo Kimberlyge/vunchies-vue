@@ -9,6 +9,15 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'overview',
 
+  data () {
+    return {
+      categories: [
+        // {name: 'breakfast', id: 1},
+        // {name: 'dinner', id: 14}
+      ]
+    }
+  },
+
   computed: {
     ...mapGetters([
       'posts'

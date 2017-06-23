@@ -2,5 +2,6 @@
  * recipes default state
  */
 export default {
-  records: {}
+  animations: ['slideLeft', 'slideRight'],
+  view: 'slideLeft'
 }

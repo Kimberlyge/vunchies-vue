@@ -4,7 +4,9 @@
 <template>
 	<div>
 		<site-header />
-	  <router-view />
+		<transition v-on:enter="enterSection" v-on:leave="leaveSection" appear>
+	  	<router-view />
+		</transition>
 	  <site-footer />
 	</div>
 </template>
