@@ -33,7 +33,7 @@ export default {
       return _.get(post, 'acf.cover.sizes.large')
     },
 
-    ingredients () {
+    ingredientsList () {
       const post = this.post
 
       return _.get(post, 'acf.ingredients')

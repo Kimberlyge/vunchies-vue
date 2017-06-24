@@ -1,69 +1,82 @@
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-
 /**
- * Fonts, sizes and text colors
- *
- * This file contains all possible font-families, font-styles, font-sizes,
- * colors and text-transforms.
- *
- * Avoid composing these styles directly. Create a new heading or type in
- * heading.css or type.css to use instead.
-*/
+ * Typography
+ */
 
-/* Font families
-   ========================================================================== */
-.pt-sans { font-family: 'PT Sans', sans-serif; }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Playfair+Display:400,400i|Source+Sans+Pro:300,400,600|Montserrat:400,700');
 
-/* Font sizes
-   ========================================================================== */
+.font-playfair {
+	font-family: 'Playfair Display', serif; font-weight: 400;
+}
 
-/* Heading sizes */
-.h-xsmall { font-size: 1.2rem; }
-.h-small { font-size: 1.4rem; }
-.h-medium { font-size: 1.8rem; }
-.h-large { font-size: 2.4rem; }
-.h-xlarge { font-size: 3rem; }
-.h-xxlarge { font-size: 3.6rem; }
+.font-playfair-italic {
+	font-family: 'Playfair Display', sans-serif; font-weight: 400; font-style: italic;
+}
 
-/* Type sizes */
+.font-sans-serif {
+	font-family: 'Source Sans Pro', sans-serif; font-weight: 400;
+}
+
+.font-sans-serif-bold {
+	font-family: 'Source Sans Pro', sans-serif; font-weight: 600;
+}
+
 .small { font-size: 1.2rem; line-height: 1.428em; }
 .medium { font-size: 1.4rem; line-height: 1.428em; }
 .large { font-size: 1.6rem; line-height: 1.428em; }
 
-/**
- * Small
- *
- * Create lighter, secondary text in any heading/type with a
- * generic <small> tag.
- */
-.h-xsmall, .h-small, .h-medium, .h-large, .h-xlarge, .h-xxlarge,
-.small, .medium, .large {
-  small {
-    font-size: 0.65em;
-  }
+
+.h1 {
+	line-height: 1.1;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	font-size: 35px;
+
+	@media ($s) {
+		font-size: 40px;
+	}
+
+	@media ($m) {
+		font-size: 50px;
+	}
+
+	@media ($l) {
+		font-size: 70px;
+	}
 }
 
-/**
- * Font size breakpoints
- *
- * Handle all device specific font sizes here
-*/
-@media ($m) {
-  /*.h-xxlarge { font-size: 5rem; }*/
+.h2 {
+	composes: font-sans-serif;
+	font-size: 25px;
+	line-height: 1.1;
+	letter-spacing: 0.05em;
+
+	@media ($m) {
+		font-size: 26px;
+	}
 }
 
-/* Transforms
-   ========================================================================== */
-.uppercase { text-transform: uppercase; }
-.lowercase { text-transform: lowercase; }
-.italic { text-transform: italic; }
-.bold { text-transform: bold; }
+.h3 {
+	/*basically the same as a normal <p><strong combo*/
+	composes: font-sans-serif-bold;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
 
-/* Colors
-   ========================================================================== */
-.current-color { color: currentColor; }
-.black { color: $black; }
-.white { color: $white; }
+.text {
+	font-size: 14px;
+
+	@media ($ml) {
+		font-size: $base-font-size;
+	}
+}
+
+blockquote {
+	em {
+		border-bottom: 4px solid;
+	}
+
+	p + p {
+		margin-top: 8px;
+	}
+}

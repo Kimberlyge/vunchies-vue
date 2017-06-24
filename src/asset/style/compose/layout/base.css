@@ -3,8 +3,30 @@
  *
 */
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#wpadminbar {
+	display: none!important;
+}
+
 html {
-  text-rendering: optimizeLegibility;
+	composes: font-sans-serif from $typography;
+	font-weight: 300;
+
+	line-height: 16;
+	background-color: $bg-color;
+	color: $text-color;
+	color: black;
+
+	/* Enable kerning and ligatures everywhere
+	 to use open-type features, bower install normalize-opentype*/
+	text-rendering: optimizeLegibility;
+
+	margin-top: 0 !important;
 }
 
 body,
@@ -19,15 +41,14 @@ body {
 	font-size: 14px;
 	line-height: 19px;
 
-	/*@media (min-width: $layout-m) {
-		font-size: 16px;
+	@media ($m) {
+		font-size: $base-font-size;
 		line-height: 22px;
 	}
-
-	@media (min-width: $layout-xl) {
-		font-size: 18px;
+	@media ($xl) {
+		/*font-size: $base-font-size + 2;*/
 		line-height: 22px;
-	}*/
+	}
 }
 
 
@@ -52,7 +73,32 @@ address,
 textarea,
 figure,
 time {
-	margin: 0 0 10px;
+	margin: 0 0 20px;
+}
+
+h1 {
+	composes: h1 from $typography;
+	margin-bottom: 40px;
+}
+
+h2 {
+	composes: h2 from $typography;
+}
+
+h3 {
+	composes: h3 from $typography;
+}
+
+p {
+	composes: text from $typography;
+	line-height: 22px;
+	@media (min-width: 980px) {
+		line-height: 24px;
+	}
+}
+
+button {
+	cursor: pointer;
 }
 
 a,

@@ -1,6 +1,8 @@
 .component {
-  composes: flex-grid from $grid;
-  composes: gutfix-xsmall from $grid;
+  composes: grid from $grid;
+  overflow: hidden;
+  padding: 0 5rem 1rem;
+  width: 90%;
 
   img {
     width: 100%;
@@ -11,45 +13,113 @@
   display: flex;
   flex-direction: column;
 
-  composes: gut-xsmall from $grid;
-  composes: col-1-2 from $grid;
-  composes: col-s-1-3 from $grid;
-  composes: col-m-1-5 from $grid;
+  composes: col-s-2-4 from $grid;
+  composes: col-m-1-3 from $grid;
+  composes: col-l-1-3 from $grid;
+
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    .media {
+      opacity: 0.9;
+    }
+
+    .copy {
+      position: relative;
+    }
+  }
 }
 
-.cover {
+.media {
   composes: imgs from $common;
+	margin: 0;
+	overflow: hidden;
+
+  position: relative;
+
+	&:after {
+		content: '';
+		display: block;
+		height: 0;
+		width: 100%;
+		padding-top: calc(2177 / 1456 * 100%);
+	}
+
+	transition: opacity 300ms ease-in-out;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* refactor with img to bg */
+    object-fit: cover;
+  }
 }
 
-.item-wrap {
-  padding: 10px;
-  border: 1px solid black;
+.copy {
+  display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-height: 140px;
+	padding: 23px;
+	margin: 0;
+	background-color: white;
+
+	img {
+		width: 14px;
+		float: left;
+	}
+
+	p {
+		font-size: 13px;
+		margin: 0;
+	}
 }
 
 .title {
-  margin: 1em 0 0.5em;
+  composes: font-sans-serif from $typography;
+
+  text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 10px;
+	flex: 1 100%;
+	font-size: 15px;
+
+	letter-spacing: 0.12em;
+
+	@media ($ml) {
+		font-size: 17px;
+	}
 }
 
 .categories {
   composes: list from $list;
 
   display: block;
+	padding: 0;
+	margin-bottom: 0;
 	line-height: 13px;
 
 	li {
 		display: inline-block;
+    float: left;
+		margin-right: 6px;
 		font-size: 9px;
+		font-style: italic;
 
 		@media (min-width: 980px) {
 			font-size: 12px;
-			margin-right: 6px;
 		}
 	}
 }
 
 .tags {
   composes: list from $list;
-  
+
   display: block;
 	margin-top: 10px;
 	width: 100%;
@@ -58,6 +128,8 @@
 		display: inline-block;
 		margin: 0 2px;
 		height: 30px;
+
+    cursor: pointer;
 	}
 
 	i {

@@ -9,13 +9,13 @@
  * composes from typography.css to create type styles.
  */
 .type-1 {
-  composes: pt-sans large from $typography;
+  composes: font-sans-serif large from $typography;
 }
 
 .type-2 {
-  composes: pt-sans medium from $typography;
+  composes: font-sans-serif medium from $typography;
 }
 
 .type-3 {
-  composes: pt-sans small from $typography;
+  composes: font-sans-serif small from $typography;
 }

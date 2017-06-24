@@ -12,8 +12,17 @@ export default {
   data () {
     return {
       categories: [
-        // {name: 'breakfast', id: 1},
-        // {name: 'dinner', id: 14}
+        {name: 'Breakfast', id: 1},
+        {name: 'Dinner', id: 14},
+        {name: 'Dessert', id: 17},
+        {name: 'Lunch', id: 13},
+        {name: 'Salad', id: 18},
+        {name: 'Sauce / Dip / Spread', id: 23},
+        {name: 'Sidedish', id: 34},
+        {name: 'Snack', id: 33},
+        {name: 'Smoothie', id: 15},
+        {name: 'Thai', id: 20},
+        {name: 'Middle-Eastern', id: 22}
       ]
     }
   },
