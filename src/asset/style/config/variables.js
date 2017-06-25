@@ -3,7 +3,15 @@ const fontList = require('./font')
 
 const colors = {
   'black': '#000',
-  'white': '#fff'
+  'white': '#fff',
+  'darkgrey': 'rgb(76, 76, 76)',
+  'gray': '#D5D5D5',
+  'lightgray': '#f7f7f7',
+  'color-primary': '#ffc440',
+  'bg-color': '#f7f7f7',
+  'grey': 'hsl(0, 0%, 62%)',
+  'darkgrey': 'hsl(0, 0%, 30%)',
+  'text-color': '#000'
 }
 
 const paths = {
@@ -20,7 +28,8 @@ const paths = {
 }
 
 const sizes = {
-  'site-width': '960px'
+  'base-font-size': '16px',
+  'site-width': '736px'
 }
 
 const fonts = {

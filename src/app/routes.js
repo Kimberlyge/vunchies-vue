@@ -21,6 +21,17 @@ export default [
     }
   },
   {
+    name: 'category',
+    path: '/category/:category',
+    component: home,
+    meta: {
+      section: {
+        name: 'category',
+        title: 'Category'
+      }
+    }
+  },
+  {
     name: 'recipe',
     path: '/:slug',
     component: recipe,

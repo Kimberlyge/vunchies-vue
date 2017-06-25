@@ -4,6 +4,6 @@
 
 <template>
   <div :class="$style.component">
-    <button v-for="(item, index) in items" :class="getNavItemClass(item)" @click="onNavItemClick(item)">{{ item }}</button>
+    <a v-for="(item, index) in items" :class="getNavItemClass(item)" @click="filterCategory(item.id)">{{ item.name }}</a>
   </div>
 </template>

@@ -5,29 +5,21 @@
 <template>
   <div :class="$style.component" id="overview">
     <div :class="$style.item" v-for='post in posts' @click="goToDetail(post)">
-      <img :class="$style.cover" v-bind:src="post.acf.cover.sizes.medium" alt="">
-      <div :class="$style.itemWrap">
+      <li v-for="id, index in post.categories">
+        <span >{{ id }}</span>
+      </li>
+      <figure :class="$style.media">
+        <img v-bind:src="post.acf.cover.sizes.large" alt="">
+      </figure>
+      <div :class="$style.copy">
         <h2 :class="$style.title">{{post.title.rendered}}</h2>
         <ul :class="$style.categories">
           <p>{{post.categegories}}</p>
-          <!-- <template v-for="id in post.categories">
-            <template v-for="category in categories">
-              <li v-if="id == category.id">{{ category.name }}</li>
-            </template>
-          </template> -->
-
-          <!-- <li >
-            <div v-if="id == 1">Breakfast</div>
-            <div v-if="id == 14">Dinner</div>
-            <div v-if="id == 17">Dessert</div>
-            <div v-if="id == 13">Lunch</div>
-            <div v-if="id == 22">Middle-eastern</div>
-            <div v-if="id == 18">Salad</div>
-            <div v-if="id == 23">Sauce / Dip / Spread</div>
-            <div v-if="id == 34">Sidedish</div>
-            <div v-if="id == 33">Snacks</div>
-            <div v-if="id == 15">Smoothie</div>
-          </li> -->
+          <div v-for="id, index in post.categories">
+            <li v-for="category in categories" v-show="id == category.id">
+              <span v-if="id == category.id">{{ category.name }}</span>
+            </li>
+          </div>
         </ul>
         <ul :class="$style.tags">
           <li v-for="id in post.tags">

@@ -1,4 +1,9 @@
 .component {
-  margin: 2em auto 2.5em;
+  position: relative;
+  padding: 2em 0 2.5em;
   text-align: center;
+
+  z-index: 2;
+
+  color: $black;
 }

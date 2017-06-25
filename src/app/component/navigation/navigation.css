@@ -4,6 +4,10 @@
 .nav-item {
   composes: button from $button;
   margin: 0 4px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
 }
 
 .nav-item-active {
