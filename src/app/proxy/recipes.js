@@ -9,3 +9,7 @@ export function getRecipes () {
 export function getRecipyBySlug (slug) {
   return axios.get(`${baseUrl}/posts?slug=${slug}`).then(result => result.data[0])
 }
+
+// export function getPostsByCategory (category) {
+//   return axios.get(`${baseUrl}/posts?filter[cat]=${category}`).then(result => result.data)
+// }

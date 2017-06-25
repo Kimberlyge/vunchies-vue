@@ -5,6 +5,9 @@
 <template>
   <div :class="$style.component" id="overview">
     <div :class="$style.item" v-for='post in posts' @click="goToDetail(post)">
+      <li v-for="id, index in post.categories">
+        <span >{{ id }}</span>
+      </li>
       <figure :class="$style.media">
         <img v-bind:src="post.acf.cover.sizes.large" alt="">
       </figure>
@@ -17,9 +20,6 @@
               <span v-if="id == category.id">{{ category.name }}</span>
             </li>
           </div>
-
-          <!-- <li >
-          </li> -->
         </ul>
         <ul :class="$style.tags">
           <li v-for="id in post.tags">

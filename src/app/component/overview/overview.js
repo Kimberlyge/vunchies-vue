@@ -23,21 +23,21 @@ export default {
         {name: 'Smoothie', id: 15},
         {name: 'Thai', id: 20},
         {name: 'Middle-Eastern', id: 22}
-      ]
+      ],
+      // posts: '',
+      categoryFilter: ''
     }
   },
 
   computed: {
     ...mapGetters([
       'posts'
-    ]),
-
-    category (id) {
-      return id
-    }
+    ])
   },
 
   mounted () {
+    // const { params } = this.$route.params.category
+    // console.log('mounted', this.$route, this.$store)
     this.$store.dispatch(recipeEvents.GET_ALL_POSTS)
   },
 

@@ -6,15 +6,15 @@ import * as recipes from 'src/app/proxy/recipes'
  */
 export default {
 
-  async [events.GET_ALL_PAGES] ({ commit }) {
-    try {
-      const result = await recipes.getRecipes()
-
-      commit(events.GET_ALL_PAGES_SUCCESS, result)
-    } catch (error) {
-      commit(events.GET_ALL_PAGES_FAILURE, error)
-    }
-  },
+  // async [events.GET_ALL_PAGES] ({ commit }) {
+  //   try {
+  //     const result = await recipes.getRecipes()
+  //
+  //     commit(events.GET_ALL_PAGES_SUCCESS, result)
+  //   } catch (error) {
+  //     commit(events.GET_ALL_PAGES_FAILURE, error)
+  //   }
+  // },
 
   async [events.GET_ALL_POSTS] ({ commit }) {
     try {
@@ -37,5 +37,17 @@ export default {
       commit(events.GET_POST_BY_SLUG_FAILURE, error)
     }
   }
+
+  // async [events.GET_POSTS_BY_CATEGORY] ({ commit }, payload) {
+  //   const { category } = payload
+  //
+  //   try {
+  //     const result = await recipes.getPostsByCategory(category)
+  //
+  //     commit(events.GET_POSTS_BY_CATEGORY_SUCCESS, result)
+  //   } catch (error) {
+  //     commit(events.GET_POSTS_BY_CATEGORY_FAILURE, error)
+  //   }
+  // }
 
 }
