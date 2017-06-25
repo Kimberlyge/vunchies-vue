@@ -46,7 +46,7 @@ export default {
     },
 
     grids () {
-      return [].concat(this.post.acf.grids)
+      return _.get(this, 'post.acf.grids', [])
     }
   },
 
